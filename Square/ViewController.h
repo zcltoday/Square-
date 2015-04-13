@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseSquare.h"
 
-@interface ViewController : UIViewController
 
+@interface ViewController : UIViewController <SquareMoveToBottom>
+{
+    BaseSquare *_square;
+    BaseSquare *_squareBak;
+    NSInteger _time;
+    
+    CGPoint curPoint;
+    CGPoint prePoint;
+}
+@property (nonatomic, retain) UIView *customView;
+@property (nonatomic, retain) UILabel *labei;
+@property (nonatomic, assign) NSInteger num;
 @end
